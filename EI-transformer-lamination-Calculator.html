@@ -1,0 +1,50 @@
+<html>
+<head>
+<!--
+# License: GNU General Public License v2.0
+# Author: Miguel 
+# Website: www.techlogist.net
+# Description: 
+# OS/Language: HTML,CSS,JavaScript
+-->
+<head>
+<body>
+<h1>Calculate dimensions of standardized<br> shell-type EI transformer lamination</h1><br>
+
+<script language="javascript">
+
+function laminatecal(){
+var d=document.laminatecalcform; var eic=d.einumber.value; var lac=d.la.value; var lbc=d.lb.value; var lcc=d.lc.value; var ldc=d.ld.value;
+var lec=d.le.value; var lfc=d.lf.value;
+if(eic){
+ lac=eic/1;
+ lbc=eic/3;
+ lcc=eic/3;
+ ldc=eic/3;
+ lec=eic/3;
+ lfc=eic/3;
+ }
+  d.la.value=lac;
+  d.lb.value=lbc;
+  d.lc.value=lcc;
+  d.ld.value=ldc;
+  d.le.value=lec;
+  d.lf.value=lfc;
+}
+</script>
+<form name="laminatecalcform">
+<table>
+<tr><td>EI number</td><td><input type="text" name="einumber"></td><td></tr>
+<tr><td><input type="button" value="Calculate" onclick="laminatecal()"></td></tr>
+<tr><td>Section:</td></tr>
+<tr><td>A:</td><td><input type="text" name="la" value="------"></td><td>mm</td></tr>
+<tr><td>B:</td><td><input type="text" name="lb" value="------"></td><td>mm</td></tr>
+<tr><td>C:</td><td><input type="text" name="lc" value="------"></td><td>mm</td></tr>
+<tr><td>D:</td><td><input type="text" name="ld" value="------"></td><td>mm</td></tr>
+<tr><td>E:</td><td><input type="text" name="le" value="------"></td><td>mm</td></tr>
+<tr><td>F:</td><td><input type="text" name="lf" value="------"></td><td>mm</td></tr>
+<tr><td><input type="reset" value=" Reset  " name="reset"></td></tr>
+</table>
+</form>
+</body>
+</html>
