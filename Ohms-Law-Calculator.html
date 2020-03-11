@@ -1,0 +1,35 @@
+<html>
+<head>
+<!--
+# License: GNU General Public License v2.0
+# Author: Miguel 
+# Website: www.techlogist.net
+# Description: 
+# OS/Language: HTML,CSS,JavaScript
+-->
+<head>
+<body>
+<script language="javascript">
+function ocsolveform(){  // Wil Calculate according to inputs from 
+var d=document.ohmslaw; var v1=d.volts.value; var o1=d.ohms.value; var a1=d.amps.value; var w1=d.watts.value;
+if (a1 && o1){w1=Math.pow(a1, 2)*o1; v1=o1*a1;}
+else if (a1 && v1){w1=a1*v1; o1=v1/a1;}
+else if (v1 && o1){w1=Math.pow(v1, 2)/o1; a1=v1/o1;}
+else if (w1 && a1){v1=w1/a1; o1=w1/Math.pow(a1,2);}
+else if (w1 && v1){a1=w1/v1; o1=Math.pow(v1,2)/w1;}
+else if (a1 && v1){w1=v1*a1; o1=v1/a1;}
+else if (w1 && o1){v1=Math.sqrt(w1*o1); a1=Math.sqrt(w1/o1);}
+d.amps.value=a1; d.volts.value=v1; d.watts.value=w1; d.ohms.value=o1;
+v1=o1=a1=w1=0;
+document.ohmslaw.reset.focus();
+}
+</script>
+<form name="ohmslaw">
+<table>
+<tr><td colspan="4" align="center">Enter two known values and press <b>Solve</b> to calculate unknowns.</td></tr>
+<tr><td align="center" width="90"><input type="Text" name="volts" size=5><br>Volts<br>(Volts)</td><td align="center" width="90"><input type="Text" name="ohms" size=5 ><br>Resistance<br>(Ohms)</td><td align="center" width="90"><input type="Text" name="amps" size=5 ><br>Current<br>(Amps)</td><td align="center" width="90"><input type="Text" name="watts" size=5 ><br>Power<br>(Watts)</td></tr>
+<tr><td align="center" colspan="2"><input type="button"  Value=" Solve  " name="solve" onClick="ocsolveform()"></td><td align="center" colspan="2"><input type="reset" value=" Reset  " name="reset" onClick="document.f1.volts.focus()"></td></tr>
+</table>
+</form>
+</body>
+</html>
