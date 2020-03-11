@@ -1,0 +1,32 @@
+<html>
+<head>
+<!--
+# License: GNU General Public License v2.0
+# Author: Miguel 
+# Website: www.techlogist.net
+# Description: 
+# OS/Language: HTML,CSS,JavaScript
+-->
+<head>
+<body>
+<h1>Probable maximum power from a transformer calculator</h1>
+<script LANGUAGE="javaScript">
+function maxpowercalc (){
+var d=document.maxpowerform; var ts=d.topside.value; var ds=d.depthside.value; var mp=d.maxpower.value;
+	if(ts && ds){
+	mp=ts*ds;
+	}
+	d.maxpower.value=mp;
+}
+</script>
+<form name="maxpowerform">
+<table>
+<TR><TD>Top:</TD><TD><INPUT TYPE ="text" NAME="topside" SIZE=15></TD><td>cm</td></TR>
+<TR><TD>Depth:</TD><TD><INPUT TYPE ="text" NAME="depthside" SIZE=15></TD><td>cm</td></TR>
+<TR><TD><INPUT TYPE ="button" VALUE="Calculate" ONCLICK="maxpowercalc()"></TD></tr>
+<TR><TD>The probable power:</TD><TD><INPUT TYPE="text" NAME="maxpower" value="-----" SIZE=15><td>watts</td></TD></TR>
+<TR><td><input type="reset" value=" Reset  " name="reset"></td></TR>
+</table>
+</form>
+</body>
+</html>
